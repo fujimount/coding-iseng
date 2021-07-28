@@ -1,0 +1,85 @@
+<div class="container">
+    <mat-card>
+        <mat-toolbar color="accent">
+            <div align="center" style="color:white; text-align:right;">
+                CRUD Operation in Angular 11 using Web API and Sql Database
+            </div>
+
+        </mat-toolbar>
+        <br><br>
+        <mat-card-content>
+            <form [formgroup]="libraryForm" (ngSubmit)="onFormSubmit(libraryForm.value)">
+                <table>
+                    <tr>
+                        <td class="tbl1">
+                            <mat-form-field class="demo-full-width">
+                                <input formControlName="Kode_Buku" matTooltip="Enter Code" matInput placeholder="Code">
+                            </mat-form-field>
+                            <mat-error>
+                                <span *ngIf="!libraryForm.get('Kode_Buku').value && libraryForm.get('Kode_Buku').touched"></span>
+                            </mat-error>
+                        </td>
+                        <td class="tbl1">
+                            <mat-form-field class="demo-full-width">
+                                <input formControlName="Judul_Buku" matTooltip="Enter Books Title" matInput placeholder="Books Title">
+                            </mat-form-field>
+                            <mat-error>
+                                <span *ngIf="!libraryForm.get('Judul_Buku').value && libraryForm.get('Judul_Buku').touched"></span>
+                            </mat-error>
+                        </td>
+                        <td class="tbl1">
+                            <mat-form-field class="demo-full-width">
+                                <input formControlName="Pengarang" matTooltip="Enter Author" matInput placeholder="Author">
+                            </mat-form-field>
+                            <mat-error>
+                                <span *ngIf="!libraryForm.get('Pengarang').value && libraryForm.get('Pengarang').touched"></span>
+                            </mat-error>
+                        </td>
+                        <td class="tbl1">
+                            <mat-form-field class="demo-full-width">
+                                <input formControlName="Jumlah_Buku" matTooltip="Quantity" matInput placeholder="Quantity">
+                            </mat-form-field>
+                            <mat-error>
+                                <span *ngIf="!libraryForm.get('Jumlah_Buku').value && libraryForm.get('Jumlah_Buku').touched"></span>
+                            </mat-error>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td  class="content-center">
+                        <button type="submit" mat-raised-button color="accent" matTooltip="Click Submit Button" [disabled]="!librarySForm.valid">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="reset" mat-raised-button color="accent" matTooltip="Click Reset Button" (click)="resetForm()">Reset</button>
+                        </td>
+                        <td>
+                        <p *ngIf="dataSaved" style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success" align="left">
+                            {{massage}}
+                        </p>
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+                <table>
+                    <tr ngclass="btn-primary">
+                        <th class="tbl2">Kode_Buku</th>
+                        <th class="tbl2">Jududl_Buku</th>
+                        <th class="tbl2">Pengarang</th>
+                        <th class="tbl2">Jumlah_Buku</th>
+
+                    </tr>
+                    <tr *ngFor="let library of allLibrary | async">
+                        <td class="tbl2">{{library.Kode_Buku}}</td>
+                        <td class="tbl2">{{library.Judul_Buku}}</td>
+                        <td class="tbl2">{{library.Pengarang}}</td>
+                        <td class="tbl2">{{library.Jumlah_Buku}}</td>
+                        <td class="tbl2">
+                            <button type="button" class="btn btn-info" matTooltip="Click Edit Button" (click)="loadLibraryToEdit(library.Kode_Buku)">Edit</button>
+                        </td>
+                        <td class="tbl2">
+                            <button type="button" class="btn btn-danger" matTooltip="Click Delete Button" (click)="deleteEmployee(library.Kode_Buku)">Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
