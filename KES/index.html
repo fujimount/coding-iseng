@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+crossorigin="anonymous" />
+<script src="jquery.min.js"></script>
+<title>KES POS Payment</title>
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img_logo/keslogo4.jpg" width="150px" height="80px">
+            </div>
+            <nav>
+                <ul id="Menu">
+                    <li><a href=#>Layanan</a></li>
+                    <li><a href=# class="dropbtn">KESpos<!--Produk <i class="fas fa-caret-down">--></i></a>
+                        <!--<div >
+                            <ul class="dropdown_menu">
+                                <li><a href="#">Merchant Application</a></li>
+                                <li><hr></li>
+                                <li><a href="#">Customer Application</a></li>
+                            </ul>
+                        </div>-->
+                    </li>
+                    <li><a href=#>KESpay</a></li>
+                    <li><a href=#>Harga</a></li>
+                    <li><a href=#>Hubungi Kami</a></li>
+                </ul>
+            </nav>
+            <i class="fa fa-bars" id="menu-icon" onclick="menutoggle()"></i>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <img src="img_logo/POS7.jpg">
+            </div>
+            <div class="col-2">
+                <h1>Saatnya meningkatkan <br> bisnismu ke level yang <br> berbeda.</h1>
+                <a href="" class="btn">Coba Gratis &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--fitur kes pos-->
+<div>
+    <div class="row">
+        <div class="col-3">
+            <img src="img_logo/POS6.jpg" >
+        </div>
+        <div class="col-3">
+            <h1>Meningkatkan pencatatan, pemeriksaan transaksi harian.</h1>
+            <p>Memberikan kemudahan kepada seller serta <br> menjamin pencatatan transaksi.</p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h1>Memudahkan kamu dalam berbelanja.</h1>
+            <p>Memberikan kemudahan kepada pelanggan serta <br> menjamin keamanan dalam bertransaksi.</p>
+        </div>
+        <div class="col-3">
+            <img src="img_logo/POS5.jpg" >
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <img src="img_logo/POS8.jpg" >
+        </div>
+        <div class="col-3">
+            
+            <h1>Kenyamanan dalam bertransaksi.</h1>
+            <p>Rasa aman dan nyaman, disetiap proses transaksi.</p>
+        </div>
+
+    </div>
+</div>
+<!--footer-->
+<div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="img_logo/keslogo5.jpg">
+                </div>
+                <div class="footer-col-2">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li>Point of Sales</li>
+                        <li>Management Inventory</li>
+                        <li>Merchant Application</li>
+                        <li>Customer Application</li>
+                        <li>Harga</li>
+                    </ul>
+
+                </div>
+                <div class="footer-col-3">
+                    <h3>Perusahaan</h3>
+                    <ul>
+                        <li>Informasi Perusahaan</li>
+                        <li>Bantuan</li>
+                        <li>Hubungi Kami</li>
+                        <li>Dukungan</li>
+                        <li>Karir</li>
+                    </ul>
+                </div>              
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Citra Abadi Informatika</p>
+        </div>
+    </div>
+</div>
+<!--menu toggle-->
+
+<script>
+    var MenuItems = document.getElementById("Menu");
+    
+    Menu.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if (Menu.style.maxHeight == "0px")
+           {
+                Menu.style.maxHeight = "500px";
+           }
+        else
+           {
+                Menu.style.maxHeight = "0px"
+           }
+    }
+</script>
+<script>
+    $('.dropbtn').click(function(){
+        $('.dropdown_menu').toggleClass('display');
+    })
+</script>
+</body>
+</html>

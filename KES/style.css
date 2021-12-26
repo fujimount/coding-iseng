@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Poppins';
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    color:darkslateblue;
+}
+
+p{
+    color: #fff;
+}
+
+.dropdown_menu{
+    display: none;
+}
+
+nav ul li:hover .dropdown_menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    background-color: teal;
+    text-align: left;
+    
+}
+
+.dropdown_menu ul{
+    display: block;
+    margin: 5px;
+}
+
+.dropdown_menu ul li{
+    width: 200px;
+    padding: 5px;
+    text-align: left;
+    display: inline-block;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    max-width: 500px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1{
+    font-size: 35px;
+    color:whitesmoke;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.header{
+    /*background: radial-gradient(#4AED71, #A5FDBA );*/
+    background: #84EF9E;
+}
+
+.header .row{
+    margin-top: 0px;
+}
+
+#menu-icon{
+    width: 25px;
+    margin-left: 20px;
+    display: none;
+}
+
+.btn{
+    display: inline-block;
+    background-color:teal;
+    color: #ffff;
+    padding: 15px 50px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: violet;
+}
+
+.col-3{
+    flex-basis: 50%;
+    max-width: 500px;
+}
+
+.col-3 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-3 h1{
+    font-size: 40px;
+    color: #84ef9e;
+    line-height: 50px;
+    margin: 25px 0;
+}
+
+.col-3 p{
+    font-size: 15px;
+    color: darkslategrey;
+}
+
+/*----footer----*/
+.footer{
+    background-color:darkslategrey;
+    color: gainsboro;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footer p{
+    color: gainsboro;
+}
+
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+.footer-col-1 img{
+    width: 140px;
+    margin: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+    line-height: 25px;
+}
+
+.footer-col-3{
+    flex-basis: 15%;
+    text-align: center;
+    line-height: 25px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.footer hr{
+    border: none;
+    background: #fff;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright{
+    text-align: center;
+}
+
+/*----media menu----*/
+@media only screen and (max-width: 800px){
+
+	nav ul{
+		position: fixed;
+		top: 100px;
+		left: 0;
+		background: #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+        position: relative;
+	}
+	nav ul li a{
+		color: #fff;
+	}
+    .dropdown_menu{
+        display: none;
+        left: 0;
+        top: 0;
+        /*margin: 10px;*/
+        width: 100%;
+        visibility: visible;
+        position: relative;
+        z-index: 1;
+    }
+    .display{
+        display: block;
+    }
+    /*nav ul li:hover 
+    .dropdown_menu{
+        display: none;
+        left: 0;
+        top: 0;
+        /*margin: 10px;
+        width: 100%;
+        visibility: hidden;
+    }*/
+    
+	#menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+}
+
+/*------- media query menu for less than 600 screen size -------*/
+
+@media only screen and (max-width: 600px)
+{
+	.row{
+		text-align: center;
+	}
+	.col-2, .col-3{
+		flex-basis: 100%;
+		
+	}
+}
